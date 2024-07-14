@@ -1,0 +1,43 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x20e74c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170",label="{label_entry:\l  %op0 = call i32 @input()\l  %op1 = call i32 @input()\l  store i32 %op1, i32* @len, align 4\l  call void @readarray()\l  br label %label2\l}"];
+	Node0x20e74c0 -> Node0x20e7930;
+	Node0x20e7930 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label2:                                           \l  %op3 = phi i32 [ 0, %label_entry ], [ %op14, %label12 ]\l  %op4 = phi i32 [ %op0, %label_entry ], [ %op4, %label12 ]\l  %op5 = icmp slt i32 %op3, %op4\l  %op6 = zext i1 %op5 to i32\l  %op7 = icmp ne i32 %op6, 0\l  br i1 %op7, label %label8, label %label10\l|{<s0>T|<s1>F}}"];
+	Node0x20e7930:s0 -> Node0x20e7dd0;
+	Node0x20e7930:s1 -> Node0x20e3fa0;
+	Node0x20e7dd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label8:                                           \l  %op9 = icmp slt i32 %op3, 0\l  br i1 %op9, label %label11, label %label12\l|{<s0>T|<s1>F}}"];
+	Node0x20e7dd0:s0 -> Node0x20e4370;
+	Node0x20e7dd0:s1 -> Node0x20e7a60;
+	Node0x20e3fa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e3d9d370",label="{label10:                                          \l  br label %label15\l}"];
+	Node0x20e3fa0 -> Node0x20e4490;
+	Node0x20e4370 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e3d9d370",label="{label11:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20e7a60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label12:                                          \l  %op13 = getelementptr [20000000 x i32], [20000000 x i32]* @matrix, i32 0,\l... i32 %op3\l  store i32 %op3, i32* %op13, align 4\l  %op14 = add i32 %op3, 1\l  br label %label2\l}"];
+	Node0x20e7a60 -> Node0x20e7930;
+	Node0x20e4490 [shape=record,color="#b70d28ff", style=filled, fillcolor="#d6524470",label="{label15:                                          \l  %op16 = phi i32 [ 0, %label10 ], [ %op30, %label26 ]\l  %op17 = load i32, i32* @len, align 4\l  %op18 = icmp slt i32 %op16, %op17\l  %op19 = zext i1 %op18 to i32\l  %op20 = icmp ne i32 %op19, 0\l  br i1 %op20, label %label21, label %label24\l|{<s0>T|<s1>F}}"];
+	Node0x20e4490:s0 -> Node0x20e9340;
+	Node0x20e4490:s1 -> Node0x20e93b0;
+	Node0x20e9340 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670",label="{label21:                                          \l  %op22 = getelementptr [20000000 x i32], [20000000 x i32]* @matrix, i32 0,\l... i32 0\l  %op23 = icmp slt i32 %op16, 0\l  br i1 %op23, label %label25, label %label26\l|{<s0>T|<s1>F}}"];
+	Node0x20e9340:s0 -> Node0x20e99e0;
+	Node0x20e9340:s1 -> Node0x20e8fe0;
+	Node0x20e93b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cbd8ee70",label="{label24:                                          \l  br label %label31\l}"];
+	Node0x20e93b0 -> Node0x20e9b00;
+	Node0x20e99e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cbd8ee70",label="{label25:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20e8fe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670",label="{label26:                                          \l  %op27 = getelementptr [100000 x i32], [100000 x i32]* @ad, i32 0, i32 %op16\l  %op28 = load i32, i32* %op27, align 4\l  %op29 = call i32 @transpose(i32 %op4, i32* %op22, i32 %op28)\l  %op30 = add i32 %op16, 1\l  br label %label15\l}"];
+	Node0x20e8fe0 -> Node0x20e4490;
+	Node0x20e9b00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370",label="{label31:                                          \l  %op32 = phi i32 [ 0, %label24 ], [ %op50, %label46 ]\l  %op33 = phi i32 [ 0, %label24 ], [ %op51, %label46 ]\l  %op34 = load i32, i32* @len, align 4\l  %op35 = icmp slt i32 %op33, %op34\l  %op36 = zext i1 %op35 to i32\l  %op37 = icmp ne i32 %op36, 0\l  br i1 %op37, label %label38, label %label41\l|{<s0>T|<s1>F}}"];
+	Node0x20e9b00:s0 -> Node0x20ea470;
+	Node0x20e9b00:s1 -> Node0x20ea540;
+	Node0x20ea470 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ed836670",label="{label38:                                          \l  %op39 = mul i32 %op33, %op33\l  %op40 = icmp slt i32 %op33, 0\l  br i1 %op40, label %label45, label %label46\l|{<s0>T|<s1>F}}"];
+	Node0x20ea470:s0 -> Node0x20ea820;
+	Node0x20ea470:s1 -> Node0x20ea020;
+	Node0x20ea540 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#abc8fd70",label="{label41:                                          \l  %op42 = icmp slt i32 %op32, 0\l  %op43 = zext i1 %op42 to i32\l  %op44 = icmp ne i32 %op43, 0\l  br i1 %op44, label %label52, label %label54\l|{<s0>T|<s1>F}}"];
+	Node0x20ea540:s0 -> Node0x20eab30;
+	Node0x20ea540:s1 -> Node0x20eb1c0;
+	Node0x20ea820 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#abc8fd70",label="{label45:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20ea020 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ed836670",label="{label46:                                          \l  %op47 = getelementptr [20000000 x i32], [20000000 x i32]* @matrix, i32 0,\l... i32 %op33\l  %op48 = load i32, i32* %op47, align 4\l  %op49 = mul i32 %op39, %op48\l  %op50 = add i32 %op32, %op49\l  %op51 = add i32 %op33, 1\l  br label %label31\l}"];
+	Node0x20ea020 -> Node0x20e9b00;
+	Node0x20eab30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#9abbff70",label="{label52:                                          \l  %op53 = sub i32 0, %op32\l  br label %label54\l}"];
+	Node0x20eab30 -> Node0x20eb1c0;
+	Node0x20eb1c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#abc8fd70",label="{label54:                                          \l  %op55 = phi i32 [ %op32, %label41 ], [ %op53, %label52 ]\l  call void @output(i32 %op55)\l  ret i32 0\l}"];
+}

@@ -1,0 +1,42 @@
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/1-return.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/2-decl_int.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/3-decl_float.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/4-decl_int_array.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/5-decl_float_array.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/6-num_add_int.cminus==========
+210								210
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/7-assign_int_var_local.cminus==========
+210								210
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/8-assign_int_array_local.cminus==========
+210								210
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/9-assign_cast.cminus==========
+5								5
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/10-funcall.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/11-funcall_chain.cminus==========
+210								210
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/12-funcall_recursion.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/13-if_stmt.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/14-while_stmt.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/15-if_while.cminus==========
+45								45
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/16-if_chain.cminus==========
+3								3
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/17-while_chain.cminus==========
+0								0
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/18-global_var.cminus==========
+10								10
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/19-global_local_var.cminus==========
+20								20
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/20-gcd_array.cminus==========
+18								18
+==========/home/bingyu/2023ustc-jianmu-compiler/tests/3-codegen/autogen/testcases_general/21-comment.cminus==========
+0								0

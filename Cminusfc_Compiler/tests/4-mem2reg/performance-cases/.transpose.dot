@@ -1,0 +1,42 @@
+digraph "CFG for 'transpose' function" {
+	label="CFG for 'transpose' function";
+
+	Node0x20e2fd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170",label="{label_entry:\l  %op3 = sdiv i32 %arg0, %arg2\l  br label %label4\l}"];
+	Node0x20e2fd0 -> Node0x20e30d0;
+	Node0x20e30d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b39670",label="{label4:                                           \l  %op5 = phi i32 [ 0, %label_entry ], [ %op25, %label24 ]\l  %op6 = phi i32 [ %op3, %label_entry ], [ %op6, %label24 ]\l  %op7 = phi i32 [ %arg2, %label_entry ], [ %op7, %label24 ]\l  %op8 = phi i32* [ %arg1, %label_entry ], [ %op8, %label24 ]\l  %op9 = icmp slt i32 %op5, %op6\l  %op10 = zext i1 %op9 to i32\l  %op11 = icmp ne i32 %op10, 0\l  br i1 %op11, label %label12, label %label13\l|{<s0>T|<s1>F}}"];
+	Node0x20e30d0:s0 -> Node0x20e3910;
+	Node0x20e30d0:s1 -> Node0x20e3980;
+	Node0x20e3910 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b59970",label="{label12:                                          \l  br label %label15\l}"];
+	Node0x20e3910 -> Node0x20e3b00;
+	Node0x20e3980 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#8fb1fe70",label="{label13:                                          \l  %op14 = sub i32 0, 1\l  ret i32 %op14\l}"];
+	Node0x20e3b00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label15:                                          \l  %op16 = phi i32 [ 0, %label12 ], [ %op29, %label28 ]\l  %op17 = icmp slt i32 %op16, %op7\l  %op18 = zext i1 %op17 to i32\l  %op19 = icmp ne i32 %op18, 0\l  br i1 %op19, label %label20, label %label24\l|{<s0>T|<s1>F}}"];
+	Node0x20e3b00:s0 -> Node0x20e4860;
+	Node0x20e3b00:s1 -> Node0x20e3200;
+	Node0x20e4860 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label20:                                          \l  %op21 = icmp slt i32 %op5, %op16\l  %op22 = zext i1 %op21 to i32\l  %op23 = icmp ne i32 %op22, 0\l  br i1 %op23, label %label26, label %label30\l|{<s0>T|<s1>F}}"];
+	Node0x20e4860:s0 -> Node0x20e4ef0;
+	Node0x20e4860:s1 -> Node0x20e4f60;
+	Node0x20e3200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#eed0c070",label="{label24:                                          \l  %op25 = add i32 %op5, 1\l  br label %label4\l}"];
+	Node0x20e3200 -> Node0x20e30d0;
+	Node0x20e4ef0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#cc403a70",label="{label26:                                          \l  %op27 = add i32 %op16, 1\l  br label %label28\l}"];
+	Node0x20e4ef0 -> Node0x20e3d20;
+	Node0x20e3d20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label28:                                          \l  %op29 = phi i32 [ %op27, %label26 ], [ %op57, %label55 ]\l  br label %label15\l}"];
+	Node0x20e3d20 -> Node0x20e3b00;
+	Node0x20e4f60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70",label="{label30:                                          \l  %op31 = mul i32 %op5, %op7\l  %op32 = add i32 %op31, %op16\l  %op33 = icmp slt i32 %op32, 0\l  br i1 %op33, label %label34, label %label35\l|{<s0>T|<s1>F}}"];
+	Node0x20e4f60:s0 -> Node0x20e5660;
+	Node0x20e4f60:s1 -> Node0x20e56d0;
+	Node0x20e5660 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cedaeb70",label="{label34:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20e56d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{label35:                                          \l  %op36 = getelementptr i32, i32* %op8, i32 %op32\l  %op37 = load i32, i32* %op36, align 4\l  %op38 = mul i32 %op5, %op7\l  %op39 = add i32 %op38, %op16\l  %op40 = icmp slt i32 %op39, 0\l  br i1 %op40, label %label41, label %label42\l|{<s0>T|<s1>F}}"];
+	Node0x20e56d0:s0 -> Node0x20e5c90;
+	Node0x20e56d0:s1 -> Node0x20e5d00;
+	Node0x20e5c90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cedaeb70",label="{label41:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20e5d00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{label42:                                          \l  %op43 = getelementptr i32, i32* %op8, i32 %op39\l  %op44 = load i32, i32* %op43, align 4\l  %op45 = mul i32 %op16, %op6\l  %op46 = add i32 %op45, %op5\l  %op47 = icmp slt i32 %op46, 0\l  br i1 %op47, label %label48, label %label49\l|{<s0>T|<s1>F}}"];
+	Node0x20e5d00:s0 -> Node0x20e68e0;
+	Node0x20e5d00:s1 -> Node0x20e6950;
+	Node0x20e68e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cbd8ee70",label="{label48:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20e6950 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e36c5570",label="{label49:                                          \l  %op50 = getelementptr i32, i32* %op8, i32 %op46\l  store i32 %op44, i32* %op50, align 4\l  %op51 = mul i32 %op5, %op7\l  %op52 = add i32 %op51, %op16\l  %op53 = icmp slt i32 %op52, 0\l  br i1 %op53, label %label54, label %label55\l|{<s0>T|<s1>F}}"];
+	Node0x20e6950:s0 -> Node0x20e6f10;
+	Node0x20e6950:s1 -> Node0x20e5320;
+	Node0x20e6f10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cbd8ee70",label="{label54:                                          \l  call void @neg_idx_except()\l  ret i32 0\l}"];
+	Node0x20e5320 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e36c5570",label="{label55:                                          \l  %op56 = getelementptr i32, i32* %op8, i32 %op52\l  store i32 %op37, i32* %op56, align 4\l  %op57 = add i32 %op16, 1\l  br label %label28\l}"];
+	Node0x20e5320 -> Node0x20e3d20;
+}

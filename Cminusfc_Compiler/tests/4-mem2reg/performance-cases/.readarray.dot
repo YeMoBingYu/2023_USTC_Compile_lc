@@ -1,0 +1,16 @@
+digraph "CFG for 'readarray' function" {
+	label="CFG for 'readarray' function";
+
+	Node0x20e1c40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dbdcde70",label="{label_entry:\l  br label %label0\l}"];
+	Node0x20e1c40 -> Node0x20e1e00;
+	Node0x20e1e00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label0:                                           \l  %op1 = phi i32 [ 0, %label_entry ], [ %op13, %label11 ]\l  %op2 = load i32, i32* @len, align 4\l  %op3 = icmp slt i32 %op1, %op2\l  %op4 = zext i1 %op3 to i32\l  %op5 = icmp ne i32 %op4, 0\l  br i1 %op5, label %label6, label %label9\l|{<s0>T|<s1>F}}"];
+	Node0x20e1e00:s0 -> Node0x20e2210;
+	Node0x20e1e00:s1 -> Node0x20e22e0;
+	Node0x20e2210 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label6:                                           \l  %op7 = call i32 @input()\l  %op8 = icmp slt i32 %op1, 0\l  br i1 %op8, label %label10, label %label11\l|{<s0>T|<s1>F}}"];
+	Node0x20e2210:s0 -> Node0x20e2600;
+	Node0x20e2210:s1 -> Node0x20e1f10;
+	Node0x20e22e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{label9:                                           \l  ret void\l}"];
+	Node0x20e2600 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{label10:                                          \l  call void @neg_idx_except()\l  ret void\l}"];
+	Node0x20e1f10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label11:                                          \l  %op12 = getelementptr [100000 x i32], [100000 x i32]* @ad, i32 0, i32 %op1\l  store i32 %op7, i32* %op12, align 4\l  %op13 = add i32 %op1, 1\l  br label %label0\l}"];
+	Node0x20e1f10 -> Node0x20e1e00;
+}
